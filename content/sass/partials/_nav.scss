@@ -1,0 +1,364 @@
+.nav {
+    -webkit-box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.2); 
+    box-shadow: 0px 5px 10px -10px rgba(0,0,0,0.2);
+
+    @media (min-width: 951px) {            
+        background-color: #ffffff;
+
+        nav {
+            margin: 0 auto;
+        }
+
+        &__mega--flat > * {
+            flex: 1;
+        }
+    
+        &__menu-toggle, &__sm-header, &__sm-return, &__sm-footer {
+            display: none;
+        }
+    }
+
+    @media all and (max-width: 950px) {
+        padding: 8px;
+
+        &__sm-footer {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            display: flex;
+
+            .mbl-login-btn .logoutBtn {
+                cursor: pointer;
+            }
+
+            a, div, div > span {
+                margin-right: 20px;
+                font-size: 18px;
+                letter-spacing: -1px;
+                @include font-face('Raleway', 16px, 500, normal, capitalize);
+
+            }
+
+            > div > a > span, > div > a > span, > div > span > span {
+                color: $leap-green;
+            }
+        }
+
+        &__menu-toggle, &__sm-header, &__sm-return {
+            display: block;
+        }
+    
+        &__menu-toggle {
+            border: 0;
+            position: absolute;
+            top: 21px;
+            left: 20px;
+        }
+    
+        &__menu-toggle:focus ~ ul {
+            left: 0;
+        }
+    
+        &__sm-header {
+            order: -1;
+            @include pattern-background;
+        }
+        
+        &__sm-header a, &__sm-return a {
+            padding: 20px 20px;
+            color: white;
+            font-size: 20px;
+            visibility: visible;
+        }
+        
+        &__sm-return {
+            order: -1;
+        }
+        
+        &__sm-return a {
+            left: -7px;
+            margin-top: -60px;
+            pointer-events: none;
+            padding: 14px 0px;
+  
+            &:before {
+                content: "";
+                background-image: url("/content/images/icons/chevron_left-24px.svg");
+                @include cover-background;
+                @include center-background;
+                width: 24px;
+                height: 12px;
+                background-size: 24px;
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+    }
+
+    &__ul {
+        @include clean-lists;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+
+        li {
+            @include clean-lists; 
+        }
+
+       > li {
+            > a {
+                @media all and (max-width: 950px) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @media (min-width: 951px) {
+            position: relative;
+
+            li > [aria-haspopup="true"]:after {
+                background-image: url("/content/images/icons/expand_more-24px.svg");
+                @include cover-background;
+                @include center-background;
+                width: 24px;
+            }
+
+            li > [aria-haspopup="true"]:focus:after, li:focus-within > [aria-haspopup="true"]:after{
+                background-image: url("/content/images/icons/expand_less-24px.svg");
+                @include cover-background;
+                @include center-background;
+                width: 24px;
+            }
+
+            li > [aria-haspopup="true"]:focus ~ ul {
+                transform-origin: top;
+                animation: dropdown 0.2s ease-out;
+            }
+
+            li > [aria-haspopup="true"] ~ ul:hover, :focus-within > [aria-haspopup="true"] ~ ul, [aria-haspopup="true"]:focus ~ ul {
+                display: flex;
+            }
+
+            li:focus-within > [aria-haspopup="true"] {
+                @include pattern-background;
+                border-radius: 4px 4px 0 0;
+                color: white;
+            }
+        }
+
+        @media all and (max-width: 950px) {
+            z-index: 99;
+            justify-content: left;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100vh;
+            width: 350px;
+            max-width: 350px;
+            max-width: 90%;
+            overflow: hidden;
+            @include transition(left 0.3s);
+            box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.25);
+
+            &:hover, &:focus-within {
+                left: 0;
+            }
+        
+            li > [aria-haspopup="true"] ~ ul {
+                display: flex;
+                flex-direction: column;
+                background-color: $secondary-background;
+                position: absolute;
+                left: 100%;
+                z-index: 100;
+                top: -4px;
+                max-height: 100vh;
+                width: 100%;
+                @include transition(left 0.3s);
+            }
+
+            li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] {
+                color: #2a2a2a;
+            }
+
+            li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:after {
+                content: "+";
+                font-size: 1em;
+                font-weight: normal;
+                height: 20px;
+                line-height: 1;
+            }
+            
+            li > [aria-haspopup="true"]:focus ~ ul {
+                left: 0;
+            }
+
+            li > [aria-haspopup="true"] ~ ul {
+                margin-top: 68px;
+            }
+
+            li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:focus ~ ul, [aria-haspopup="true"] ~ ul li:focus-within > [aria-haspopup="true"] ~ ul {
+                max-height: 500px;
+                animation: dropdown 0.3s forwards;
+            }
+            
+            li > [aria-haspopup="true"] ~ ul li:focus-within > [aria-haspopup="true"] ~ ul {
+                @include transform(scaleY(1));
+                max-height: 500px;
+            }
+
+            li:focus-within ~ .nav__sm-header a {
+                visibility: hidden;
+            }
+        }
+
+        @media (max-width: 950px) and (hover: none) {
+
+            li > [aria-haspopup="true"]:hover ~ ul, [aria-haspopup="true"] ~ ul:hover {
+                left: 0;
+            }
+
+            li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"]:hover ~ ul {
+                max-height: 500px;
+                animation: dropdown 0.3s forwards;
+            }
+
+            li > [aria-haspopup="true"] ~ ul [aria-haspopup="true"] ~ ul:hover {
+                max-height: 500px;
+                @include transform(scaleY(1));
+            }
+
+            li:hover ~ .nav__sm-header a {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__links {
+        display: block;
+        text-decoration: none;
+
+        &:hover, :visited {
+            text-decoration: none; 
+        }
+    }
+
+    &__menu-links {
+        position: relative;
+        padding: 12px 18px;
+        z-index: 1;
+
+        &[aria-haspopup="true"] {
+            padding-right: 40px;
+        }
+
+        &[aria-haspopup="true"]:after {
+            content: "";
+            background-image: url("/content/images/icons/chevron_right-24px.svg");
+            @include cover-background;
+            @include center-background;
+            width: 24px;
+            width: 24px;
+            height: 24px;
+            @include absolute-center-y;
+            right: 10px;
+            @include transform(translateY(-50%));
+        }
+    }
+    
+    &__menu-header {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @media all and (max-width: 950px) {
+            font-size: 20px;
+            padding: 16px 0 4px 0;
+            display: inline-block;
+            border-bottom: 2px solid $leap-green;
+        }
+    }
+
+    &__menu-list {
+        @media all and (max-width: 950px) {
+            padding: 12px 0;
+        }
+    }
+ 
+    &__mega {
+        @include pattern-background;
+        z-index: 10;
+        @include thin-shadow;
+
+        @media all and (max-width: 950px) {
+            box-shadow: none;
+        }
+
+        ul {
+            @include clean-lists;
+        }
+
+        @media (min-width: 951px) {            
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            width: 100%;
+            padding: 0 80px;
+
+            a {
+                color: white;
+            }
+
+            a.nav__menu-header {
+                color: $leap-beige;
+                cursor:auto;
+                pointer-events: none;
+            }
+            
+            &:hover {
+                display: flex;
+            }
+
+            & a:hover {
+                color: $leap-beige;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (min-width: 951px) {            
+    .menu [aria-haspopup="true"] ~ ul {
+        display: none;
+    }
+}
+
+@media all and (max-width: 950px) {
+    #header__panel-lg {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) and (hover: none) {
+    .nav__menu-toggle:hover ~ ul {
+        left: 0;
+    }
+}
+
+@keyframes dropdown {                      
+    0% {
+        opacity: 0;
+        @include transform(scaleY(0));
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        @include transform(scaleY(1));
+    }
+}

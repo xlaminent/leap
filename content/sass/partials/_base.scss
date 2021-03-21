@@ -1,0 +1,77 @@
+$primary-background: #f9f9f9;
+$secondary-background: #ffffff;
+$text-color: #080a14;
+$soft-text-color: #333333;
+$leap-green: #3D5E61;
+$leap-beige: #FFD8AD;
+
+.icons, a {
+    color: $text-color;
+    text-decoration: none;
+}
+
+a.inline-link {
+    color: $soft-text-color;
+    text-decoration: underline;
+}
+
+.icons {
+    font-size: 30px;
+    color: $text-color;
+    vertical-align: bottom;
+
+    &:hover {
+        color: $leap-green;
+    }
+}
+
+::-webkit-input-placeholder { 
+    color: $soft-text-color;
+    font-style: italic;
+}
+
+:-ms-input-placeholder { 
+    color: $soft-text-color;
+    font-style: italic;
+}
+
+:-moz-placeholder { 
+    color: $soft-text-color;
+    font-style: italic;
+}
+
+.no-bottomspace {
+    padding-bottom: 0!important;
+}
+
+.no-topspace {
+    padding-top: 0!important;
+}
+
+.bottom-space {
+    margin-bottom: 20px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.danger {
+    color: #163CC5; 
+}
+
+.warning {
+    color: #A16A1B;
+}
+
+.error {
+    color: #bb2124;
+}

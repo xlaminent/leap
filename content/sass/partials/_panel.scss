@@ -1,0 +1,24 @@
+.adminpanel {
+    &__greeting {
+        padding: 20px 0;
+    }
+
+    span {
+        vertical-align: top;
+        font-size: 30px;
+    }
+
+    &__actions {
+        .add-product {
+            margin: 6px 0 0 15px;
+            padding: 8px 12px;
+            display: inline-block;
+            background-color: $leap-green;
+            color: white;
+
+            &:hover {
+                @include beige-hover;
+            }
+        }   
+    }
+}

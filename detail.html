@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <meta name="description" content="">	
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="content/css/style.css">
+    <title></title>
+</head>
+<body>
+    <header class="header">
+		<div class="header__logo"> 
+			<a href="index.html"><img src="/content/images/main-logo.svg" alt="Leap logo" class="logo-img"/></a>        
+        </div> 
+		<div class="header__user-panel">
+            <div id="header__panel-lg">
+                <span class="header__user-state"></span>
+                <span class="header__user-access"></span>
+            </div>
+            <a href="cart.html" title="My Cart" class="header__cart"><span class="material-icons icons">shopping_cart</span><span id="cart-items" title="Items in Cart"></span></a>
+        </div>
+
+		<div class="nav">
+            <nav>
+                <a href="javascript:void(0);" class="nav__menu-toggle"><span class="material-icons icons">menu</span></a>
+                <ul class="nav__ul">
+                    <li><a href="products.html" class="nav__links nav__menu-links">New Arrivals</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">All Shoes</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By need</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Waterproof</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Comfort</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Fit</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By Surface</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Trail</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Road</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Mountain</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Indoor</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Best For</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Training</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Support</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Race / Marathon</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Casual</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">Collections</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Running</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Trail</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Flat</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Indoor</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Competition</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By Brands</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Sweap by Nike</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">GelInfusion by Slam2K</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Helios by Puma</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Originals</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">True2Form</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Lastly</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">Technologies</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Made to fit</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Enveloped Textiles</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Size Regulator Thread</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Superior Comfort</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Gel Infusion</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">2DO Soles</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">FormFlow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Speed</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Traction Padding</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Duraility Soles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html" class="nav__links nav__menu-links">Sale</a></li>
+                    <li class="nav__sm-header"><a href="index.html" class="nav__links"><span>Home</span></a></li>
+
+                    <li class="nav__sm-footer">
+                        <div class="mbl-user-access"></div>
+                        <div class="mbl-login-btn"></div>
+                    </li>
+                </ul>
+			</nav>
+      	</div>
+        <div class="header__searchbar">
+            <form>
+                <input type="text" placeholder="Search..">
+                <span class="material-icons">search</span>
+            </form> 
+        </div>
+    </header>
+
+    <main>
+        <section class="container no-bottomspace">
+           <ul class="breadcrumb-nav">
+                <li><a href="index.html" title="Go Back">Home</a></li>
+                <li><a href="products.html" title="Go Back">Products</a></li>
+                <li>Product</li>
+            </ul>
+        </section>
+
+
+        <section id="product-container" class="container no-topspace">
+            
+            <div class="box box__left">	
+                <div class="box__img">
+                </div>
+                <div class="box__img--row">
+                </div>  
+            </div>
+            <div class="box box__right">
+                <div class="product">
+                    <h1 class="product__title"></h1>
+                    <h2>Short Product Descriptopn</h2>
+                    <h3 class="product__price"></h3>
+                    <p class="product__desc"></p> 
+                    <h4>Available sizes</h4> 
+                    <div class="product__sizes">
+                        <div onclick="selectSize(this)" title="Select" class="product__size">36</div>
+                        <div class="product__size--out" title="Sold Out"><div class="line"></div>37</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">38</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">39</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">40</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">41</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">42</div>
+                        <div class="product__size--out" title="Sold Out"><div class="line"></div>43</div>
+                        <div class="product__size--out" title="Sold Out"><div class="line"></div>44</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">45</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">46</div>
+                        <div onclick="selectSize(this)" title="Select" class="product__size">47</div>
+                        <div class="product__size--out" title="Sold Out"><div class="line"></div>48</div>
+                    </div> 
+                    <div class="product__actions"></div>
+
+                    <div class="box__accordion product-accordion">
+                        <div class="tab">
+                            <h3 onClick="changeProdTabs('tab1')" title="Open Tab" class="tab__heading">Features<span class="material-icons tab__arrows">keyboard_arrow_down</span></h3>
+                            <div id="tab1" class="hide tab__wall">
+                                <ul>
+                                    <li>
+                                        <p>Flat-runner style</p>
+                                    </li>
+                                    <li>
+                                        <p>Lightweight</p>
+                                    </li>
+                                    <li>
+                                        <p>Low cut</p>
+                                    </li>
+                                    <li>
+                                        <p>Recycled polyester thread</p>
+                                    </li>
+                                    <li>
+                                        <p>Rubber sole</p>
+                                    </li>
+                                    <li>
+                                        <p>TRACK technology</p>
+                                    </li>
+                                    <li>
+                                        <p>Speed lacing</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <h3 onClick="changeProdTabs('tab2')" title="Open Tab" class="tab__heading">Details<span class="material-icons tab__arrows">keyboard_arrow_down</span></h3>
+                            <div id="tab2" class="hide tab__wall">
+                                <ul>
+                                    <li>
+                                        <h5><b>Fit:</b></h5>
+                                        <p>True to size.</p>
+                                    </li>
+                                    <li>
+                                        <h5><b>Weight:</b></h5>
+                                        <p>315 g per.</p>
+                                    </li>
+                                    <li>
+                                        <h5><b>Heel-Toe Drop:</b></h5>
+                                        <p>4 mm.</p>
+                                    </li>
+                                    <li>
+                                        <h5><b>Category:</b></h5>
+                                        <p>Flat surface runners.</p>
+                                    </li>
+                                    <li>
+                                        <h5 class="bottomless"><b>Sustainability:</b></h5>
+                                        <p>Product made by <a href="#" class="inline-link">Manufacturer Name</a> for <a href="#" class="inline-link">Wholesaler Name</a> in South Korea.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <h3 onClick="changeProdTabs('tab3')" title="Open Tab" class="tab__heading">Reviews 
+                                <span class="material-icons stars">star</span>
+                                <span class="material-icons stars">star</span>
+                                <span class="material-icons stars">star</span>                                            
+                                <span class="material-icons stars">star</span>
+                                <span class="material-icons stars">star_border</span>  
+                                <span class="material-icons tab__arrows">keyboard_arrow_down</span>
+                            </h3>
+                            <div id="tab3" class="hide tab__wall">
+                                <div class="review">
+                                    <div class="review__header">
+                                        <p>Ratings based upon 40 Reviews</p>
+                                    </div>
+                                    <div class="review__container">
+                                        <div class="review__item">
+                                            <div class="review__stars">
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>                                            
+                                                <span class="material-icons stars">star_border</span> 
+                                                <span class="material-icons stars">star_border</span>  
+                                                <span>11.02.2020</span>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat turpis nisi, ac aliquam ex euismod. 
+                                                Curabitur nulla neque, sagittis at malesuada tempor, lacinia at purus. </p>
+                                            <h5>Reviewers Name</h5>
+                                        </div>
+                                        <div class="review__item">
+                                            <div class="review__stars">
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>                                            
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>
+                                                <span>17.02.2020</span>
+                                            </div>
+                                            <p>Donec dapibus non mi vitae malesuada. Mauris vestibulum justo magna, nec dignissim sapien mollis et. Donec a fermentum mi, 
+                                                in commodo est. Nam venenatis mauris non tellus congue.</p>
+                                            <h5>Reviewers Name</h5>
+                                        </div>
+                                        <div class="review__item">
+                                            <div class="review__stars">
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star</span>                                            
+                                                <span class="material-icons stars">star</span>
+                                                <span class="material-icons stars">star_border</span> 
+                                                <span>22.02.2020</span> 
+                                            </div>
+                                            <p>Etiam volutpat turpis nisi, ac aliquam ex euismod. Curabitur nulla neque, sagittis at malesuada tempor, lacinia at purus. </p>
+                                            <h5>Reviewers Name</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="inline-link">Load More Reviews</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="tab">
+                            <h3 onClick="changeProdTabs('tab4')" title="Open Tab" class="tab__heading">Shipping & Returns<span class="material-icons tab__arrows">keyboard_arrow_down</span></h3>
+                            <div id="tab4" class="hide tab__wall">
+                                <h5><b>Shipping</b></h5>
+                                <div>
+                                    <p>Free shipping for orders over $150 - US only. Ships within 1-3 business days.</p>
+                                    <p>See rules and guidelines for <a href="#" class="inline-link">international shipping</a>.</p>
+                                </div><br/>
+                                 <h5><b>Returns</b></h5>
+                                <div>
+                                    <p class="bottomless">Free 50-day returns on all orders and easy return process.</p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__brand">
+                        <h2>Brand Name</h2>
+                        <p>Information about the band. </p>
+                        <p>Suspendisse placerat rutrum massa tempor aliquam. Nulla cursus iaculis magna id cursus. Integer ultricies et ligula vel cursus. 
+                            Aliquam vestibulum sed odio vel suscipit. Duis vulputate orci nunc, at blandit felis placerat eget.</p><br/>
+                        <h3>Similar products by Brand Name</h3>
+                        <div class="brand__promotion">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <!-- Photo by Brennan Burling on Unsplash -->
+                                        <div><img src="content/images/brennan-burling--fhcpPYjf3g-unsplash.jpg" class="grid__img" alt="Nike Running shoes"/></div>
+                                        <h4>Floord 7th</h4>  
+                                        <p class="brand__promotion--price">$22.09</p> 
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#">
+                                        <!-- Photo by Wengang Zhai on Unsplash -->
+                                        <div><img src="content/images/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" class="grid__img" alt="Red Air Jordans shoes"/></div>
+                                        <h4>12 Gym Red</h4>  
+                                        <p class="brand__promotion--price">$67.99</p> 
+                                    </a>
+                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+    </main>
+    <footer class="footer">
+		<div class="footer__section">
+			<h3>Help</h3>
+			<p>FAQ</p>
+			<p>Site Map</p>
+		</div>
+		<div class="footer__section">
+			<h3>Contact</h3>
+			<p><b>phone</b> 41 32 01 97</p>
+			<p><b>email</b> leap@mail.com</p>
+		</div>
+		<div class="footer__section">
+			<a href="index.html"><img src="/content/images/light-logo.svg" alt="Leap logo" /></a>
+		</div>
+	</footer>
+
+    <script src="content/js/script.js" type="module"></script>
+    <script src="content/js/detail.js" type="module"></script> 
+    <script>
+        function changeProdTabs(id) {
+            const tabId = document.getElementById(id);
+            
+            if (tabId.className.indexOf("show") == -1) {
+                tabId.className += " show";
+            } else {
+                tabId.className = tabId.className.replace(" show", "");
+            }
+        }
+    </script>
+</body>
+</html>

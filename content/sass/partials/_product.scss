@@ -1,0 +1,346 @@
+#product-container {
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    margin-top: 28px;
+
+    @media all and (max-width: 950px) {
+        display: block;
+    }
+}
+
+#products-container .container {
+    display: flex;
+    overflow: hidden;
+    position: relative!important;
+}
+
+.box {
+    width: 45%;
+    position: relative;
+
+    &__left {
+        height: auto;
+        width: 100%;
+        max-width: 800px; 
+
+        @media all and (max-width: 1200px) {
+            height: auto;
+            width: 100%;
+            max-width: unset;
+        }
+    
+        @media all and (max-width: 950px) {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @media all and (min-width: 950px) and (max-width: 1300px) {
+            &::-webkit-scrollbar {
+                display: block;
+                width: 10px;
+            }
+    
+            &::-webkit-scrollbar-track {
+                background: #e6e6e6; 
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: $leap-green; 
+    
+                &:hover {
+                    background: $leap-beige;
+                }
+            }
+        }
+
+        @media all and (max-width: 950px) {
+            width: 100%;
+        }
+    }
+
+    &__img img, &__img--row img, &__left img {
+        width: 100%;
+    }
+
+    &__img--row  {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        padding-top: 10px;
+        bottom: 0;
+        cursor: zoom-in;
+
+        img {
+            overflow: hidden;
+            float: left; 
+            @include cover-image;
+            
+            @media all and (max-width: 950px) {
+                max-height: 140px;
+            }
+        }
+    }
+    
+    &__accordion {
+        border-top: 1px solid #a1b3b2;
+        border-bottom: 1px solid #a1b3b2;
+        margin-top: 25px;
+        padding: 20px 0;
+
+        .tab {
+
+            ul {
+                @include clean-lists;
+            }
+
+            h2, h3 {
+                padding: 20px 0 20px;
+                width: 100%;
+                @include font-face('Raleway', 19px, 600, normal, none);
+                letter-spacing: 2px;
+            }
+            
+            &__wall {
+                padding: 0 10px;
+                border-left: 3px solid $leap-green;
+            }
+
+            &__arrows {
+                padding-left: 5px;
+                vertical-align: middle;
+                color: $leap-green;
+            }
+
+            .stars {
+                padding: 0 2px 3px 0;
+                font-size: 20px;
+                opacity: 0.7;
+                vertical-align: bottom;
+                color: $leap-green;
+            }
+
+            h3, h4, h5, .bottomless {
+                display: inline-block;
+            }
+
+            p {
+                display: inline;
+                @include font-face('Raleway', 14px, 400, normal, none);
+            }
+
+            p, .bottomless, h3, h2 {
+                margin:  0 0 0 0;
+            }
+
+            #tab1 {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin-left: 20px;
+                    flex-direction: row;
+                    justify-content: space-between; 
+                }
+
+                li {
+                    width: 50%;
+                    list-style-type: square;
+                    color: $leap-green;
+                    margin: 3px 0;
+                    
+                    @media all and (min-width: 950px) and (max-width: 1300px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.review {
+    &__container {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        padding-top: 30px;
+
+        h5 {
+            display: block;
+            margin-top: 6px;
+            font-weight: bold;
+        }
+
+        p {
+            display: block!important;
+        }
+    }
+
+    &__stars {
+        padding-bottom: 5px;
+        :last-child {
+            float: right;
+            margin-top: 4px;
+            font-size: 12px;
+        }
+    }
+}
+
+.product {
+    top: 0;
+    width: 100%;
+    position: absolute; 
+    padding: 0 20px 0 50px;
+
+    a {
+        color: $soft-text-color;
+    }
+
+    button a {
+        text-decoration: none;
+        color: rgb(172, 172, 172);
+    }
+
+    button {
+        &:disabled {
+            a { color: rgb(172, 172, 172)!important; }
+        }
+    }
+
+    button.regularState a {
+        color: white;
+    }
+
+    button.addedState {
+        background-color:#547D87;
+        background-image: linear-gradient(to right, #547D87 0%, #58838d  51%, #547D87  100%);
+
+        a { color: white; }
+    }
+
+    @media all and (max-width: 1200px) {
+        padding-left: 25px;
+    }
+
+    @media all and (max-width: 950px) {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-weight: 400;
+    }
+
+    h3:nth-child(3) {
+        color: $leap-green;
+        @include font-face('Roboto', 24px, 500, normal, uppercase);
+    }
+
+    h4 {
+        margin: 40px 0 10px 0;
+        @include font-face('Raleway', 13px, 700, normal, uppercase);
+
+        @media all and (max-width: 650px) {
+            text-decoration: none;
+            margin: 10px;
+        }
+    }
+
+    &__desc {
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    &__sizes {
+        display: flex;
+        flex-wrap: wrap; 
+        width: 80%;
+        visibility: hidden;
+        padding: 10px 0 45px 0;
+        position: relative;
+        @include user-select;
+        border: 1px solid transparent;
+
+        @media all and (max-width: 1200px) {
+            width: 100%;
+        }
+
+        * {
+            visibility: visible;
+            @include transition(opacity 0.1s linear 0.2s, transform 0.1s ease-in-out 0.2s);
+        }
+
+        > * {
+            background-color: $secondary-background;
+            padding: 12px 14px;
+            margin: 0 15px 15px 0;
+            @include thin-shadow;
+            text-align: center;
+        }
+
+        &:hover > * {
+            opacity: 0.6; 
+            @include transform(scale(0.8));
+        }
+
+        > *:hover  {
+            opacity: 1; 
+            @include transform(scale(1.1));
+            background-color: $leap-beige;
+            @include transition-delay(0ms, 0ms);
+        }
+
+        > *.selected:hover {
+            background-color: $leap-green;
+            color: $leap-beige; 
+            border: none;
+        }
+    }
+
+    &__size {
+        cursor: pointer;
+    }
+
+    &__size--out {
+        background-color: $primary-background;
+        color: #b9b8b8;
+        cursor: not-allowed;
+        position: relative;
+
+        &:hover {
+            @extend .product__size--out;
+        }
+
+        .line {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background: linear-gradient(to left top, transparent 47.75%, #c5c5c5 49.5%, #c5c5c5 50.5%, transparent 52.25%);
+        }
+    }
+
+    &__brand {
+        padding: 20px 0;
+
+        h3 {
+            @include font-face('Raleway', 18px, 600, normal, none);
+        }
+    }
+}
+
+.selected {
+    background: $leap-green;
+    color: white;
+}

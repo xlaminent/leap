@@ -1,0 +1,66 @@
+.product-table {
+    overflow-x: auto;
+
+    .overview-count {
+        font-size: 14px;
+    }
+
+    form {
+        margin: 20px 0 20px 15px;
+
+        input {
+            @extend .filters__select;
+            width: 300px;
+            cursor: text;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: calc(100% - 15px);
+        margin-left: 15px;
+        box-sizing: border-box;
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: $leap-green;
+            color: white;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .edit {
+            background-color: $leap-green;
+            color: white;
+            padding: 5px 10px 5px 8px;
+            border-radius: 2px;
+
+            span {
+                vertical-align: bottom;
+                font-size: 22px;
+
+                @media all and (max-width: 550px) { 
+                    display: none;
+                }
+            }
+
+            &:hover {
+                @include beige-hover;
+            }
+        }
+    }
+}
+

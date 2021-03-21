@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Raleway:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="content/css/style.css">
+    <title>Edit Products</title>
+</head>
+<body>
+    <header class="header">
+		<div class="header__logo"> 
+			<a href="index.html"><img src="/content/images/main-logo.svg" alt="Leap logo" class="logo-img"/></a>      
+        </div> 
+		<div class="header__user-panel">
+            <div id="header__panel-lg">
+                <span class="header__user-state"></span>
+                <span class="header__user-access"></span>
+            </div>
+            <a href="cart.html" title="My Cart" class="header__cart"><span class="material-icons icons">shopping_cart</span><span id="cart-items" title="Items in Cart"></span></a>
+        </div>
+
+		<div class="nav">
+            <nav>
+                <a href="javascript:void(0);" class="nav__menu-toggle"><span class="material-icons icons">menu</span></a>
+                <ul class="nav__ul">
+                    <li><a href="products.html" class="nav__links nav__menu-links">New Arrivals</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">All Shoes</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By need</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Waterproof</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Comfort</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Fit</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By Surface</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Trail</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Road</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Mountain</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Indoor</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Best For</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Training</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Support</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Race / Marathon</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Casual</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">Collections</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Running</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Trail</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Flat</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Indoor</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Competition</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">By Brands</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Sweap by Nike</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">GelInfusion by Slam2K</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Helios by Puma</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Originals</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">True2Form</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Lastly</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="nav__links nav__menu-links menu-bar-link" aria-haspopup="true">Technologies</a>
+                        <ul class="nav__mega nav__mega--flat">
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Made to fit</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Enveloped Textiles</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Size Regulator Thread</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Superior Comfort</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Gel Infusion</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">2DO Soles</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">FormFlow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html" class="nav__links nav__menu-links nav__menu-header">Speed</a>
+                                <ul>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Traction Padding</a></li>
+                                    <li><a href="products.html" class="nav__links nav__menu-links nav__menu-list">Duraility Soles</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav__sm-return"><a href="javascript:void(0);" class="nav__links nav__menu-links">Back</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html" class="nav__links nav__menu-links">Sale</a></li>
+                    <li class="nav__sm-header"><a href="index.html" class="nav__links"><span>Home</span></a></li>
+
+                    <li class="nav__sm-footer">
+                        <div class="mbl-user-access"></div>
+                        <div class="mbl-login-btn"></div>
+                    </li>
+                </ul>
+			</nav>
+      	</div>
+    </header>
+
+    <main >
+        <section class="container">
+            <ul class="breadcrumb-nav">
+                <li><a href="index.html" title="Go Back">Home</a></li>
+                <li><a href="account.html" title="Go Back">Administration</a></li>
+                <li>Edit Product</li>
+            </ul>
+            <h1>Edit Product</h1>
+            <div class="img-preview"></div>
+        
+            <form id="updateForm" class="form">
+                <label for="title">Title
+                    <input id="title" type="text"/>
+                </label>
+
+                <label for="price">Price
+                    <input id="price" type="number"/>
+                </label>
+
+                <label for="description">Description
+                    <textarea id="description"></textarea>
+                </label>
+
+                <div class="form__split">
+                    <label class="form__split--part">Featured
+                        <input type="checkbox" id="featured" name="featured">
+                    </label>
+
+                    <label for="file" class="form__split--part">Product Image
+                        <input type="file" id="file" name="files" />
+                    </label>
+                </div>
+    
+                <input id="id" type="hidden" />
+                <input id="imageId" type="hidden" />
+
+                <div class="form__feedback"></div>
+
+                <button id="update-btn" title="Update"><span class="material-icons btn-icon">create</span> Update Product</button>
+                <button type="button" class="secondary-btn" id="delete-btn" title="Delete"><span class="material-icons btn-icon">delete</span> Delete Product</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+		<div class="footer__section">
+			<h3>Help</h3>
+			<p>FAQ</p>
+			<p>Site Map</p>
+		</div>
+		<div class="footer__section">
+			<h3>Contact</h3>
+			<p><b>phone</b> 41 32 01 97</p>
+			<p><b>email</b> leap@mail.com</p>
+		</div>
+		<div class="footer__section">
+			<a href="index.html"><img src="/content/images/light-logo.svg" alt="Leap logo" /></a>
+		</div>
+	</footer>
+
+    <script src="content/js/script.js" type="module"></script>
+    <script src="content/js/edit.js" type="module"></script>
+</body>
+</html>

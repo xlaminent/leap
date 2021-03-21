@@ -1,0 +1,133 @@
+#loginForm  {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+
+    a {
+        text-decoration: underline;
+    }
+
+    .form__feedback {
+        display: unset;
+    }
+       
+    > button {
+        margin: 20px 0 0 0;
+        padding: 14px 16px;
+    }
+}
+#updateForm {
+    button {
+        margin: 30px 10px 20px 0;
+        padding: 12px 16px 14px 14px;
+    }    
+}
+
+#createProductForm, #updateForm, .img-preview {
+    width: 50%;
+    max-width: 600px;
+
+    @media all and (max-width: 950px) {
+        width: 100%;
+    }
+}
+
+.form {
+    label {
+        padding-top: 20px;
+        display: inline-block;
+        width: 100%;
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 38px;
+            padding: 0 5px;
+            outline: none;
+            margin: 5px 0 0 0;
+            border: 1px solid #aaa;
+            background-color: $secondary-background;
+            color: $soft-text-color;
+            margin-right: 14px;
+            display: block;
+            @include font-face('Roboto', 16px, 400, normal, unset);
+            @include thin-shadow;
+        }
+
+        input[type='checkbox'] {
+            width: 30px;
+        }
+
+        input[type='file'] {
+            width: 200px;
+            padding: 7px 10px 12px 10px;
+        }
+
+        textarea {
+            @extend input;
+            height: 120px;
+        }
+
+        span {
+            float: right;
+            color: saddlebrown;
+        }
+    }
+
+
+    &__split {
+        &--part {
+            width: 50%!important;
+            float: left;
+
+            input[type='file'] {
+                width: 100%!important;
+            }
+        }
+    }
+
+    &__error {
+        display: none;
+        color: red;
+        font-size: 13px;
+        font-style: italic;
+        margin: 8px 0;
+    }
+
+    &__feedback {
+        margin: 30px 0 0 0;
+        display: inline-block;
+        width: 100%;
+
+        p {
+            font-size: 14px;
+            font-style: italic;
+            font-style: bold!important;
+        }
+    }
+
+    &__retrive-link {
+        margin: 33px 2px 0 0;
+        font-size: 13px;
+        text-decoration: underline;
+        float: right;
+    }
+    
+    button {
+        margin: 10px 0 ;
+    }
+}
+
+.img-preview {
+    img {
+        width: 100%;
+    }
+}
+
+.refresh-btn {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}

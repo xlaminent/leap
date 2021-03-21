@@ -1,0 +1,82 @@
+.filters {
+    padding: 10px 0;
+    position: relative;
+
+    @media all and (max-width: 650px) {
+        h1 {
+            width: 80%;
+            font-size: 28px;
+        }   
+    }
+
+    span {
+        @include font-face('Roboto', 16px, 500, normal, capitalize);
+    }
+
+    form {
+        display: inline-block;
+    }
+
+    &__list {
+        padding: 25px 0 0 0;
+    }
+    
+    &__select {
+        width: 120px;
+        height: 38px;
+        padding: 0 5px;
+        outline: none;
+        margin: 0;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        background-color: $secondary-background;
+        color: $soft-text-color;
+        margin-right: 14px;
+        cursor: pointer;
+        @include thin-shadow;
+
+        option {
+            font-size: 16px;
+        }
+
+        &:hover {
+            border-color: #888;
+            background-color: #f8f8f8;
+        }
+    }
+
+    input.productSearch {
+        @extend .filters__select;
+        width: 180px;
+        cursor: text;
+    }
+
+    &__icon {
+        display: none;
+    }
+
+    @media all and (max-width: 950px) {  
+        form {
+            width: 100%;
+        }
+        
+        &__select, input.productSearch {
+            width: 100%;
+            margin: 16px 0 0 0;
+            height: 42px;
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 12px;
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+}    

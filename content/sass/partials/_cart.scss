@@ -1,0 +1,191 @@
+.cart {
+    width: 100%;
+    display: inline-block;
+
+    @media all and (max-width: 950px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        height: 100%;
+        width: 60%;
+        display: inline-block;
+
+        @media all and (max-width: 1200px) {
+            width: 60%;
+        }
+    
+        @media all and (max-width: 950px) {
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-bottom: 1px solid grey;
+        padding: 10px 0;
+
+        @media all and (max-width: 500px) {
+            padding: 0 0 30px 0;
+            background-color: $secondary-background;
+            @include thin-shadow;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &--info {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            padding: 0 0 0 25px;
+
+            
+            @media all and (max-width: 500px) {
+                width: 100%;
+                height: 100%;
+                display: contents;
+            }
+
+            h3 {
+                @include font-face('Roboto', 17px, 500, normal, capitalize);
+            }
+
+            h4, span {
+                display: inline-block;
+                margin-top: 16px;
+                @include font-face('Roboto', 22px, 500, normal, uppercase);
+                
+                @media all and (max-width: 500px) {
+                    margin: 0;
+                    display: contents;
+                }
+            }
+
+            span {
+                margin: 16px 5px 0 20px;
+            }
+    
+            .cart__input {
+                margin-top: 20px;
+                float: left;
+
+                @media all and (max-width: 500px) {
+                    display: block;
+                    float: none;
+                }
+
+                input {
+                    width: 35px;
+                    padding: 5px 10px;
+                    border: none;
+                    font-weight: bold;
+                    text-align: center;
+                    vertical-align: bottom;
+                }
+
+                input[type=number]::-webkit-inner-spin-button,
+                input[type=number]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                }
+
+                button {
+                    -webkit-appearance: none;
+                    height: 25px;
+                    padding: 5px 8px;
+                    border: 1px solid grey;
+                }
+            }
+        }
+
+        &--img {
+            display: inline-block;
+
+            @media all and (max-width: 500px) {
+                min-height: 100px;
+            }
+            
+            img {
+                max-width: 180px;
+                min-height: 160px;
+                @include cover-image;
+
+                @media all and (max-width: 500px) {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+
+    &__checkout {
+        width: 28%;
+        float: right;
+        
+        @media all and (max-width: 1200px) {
+            width: 35%;
+        }
+    
+        @media all and (max-width: 950px) {
+            width: 100%;
+            margin-top: 40px;
+            order: 3;
+        }
+
+        h3 {
+            @include font-face('Roboto', 18px, 500, normal, capitalize);
+        }
+    }
+
+    &__summary, &__promo {
+        background-color: $secondary-background;
+        @include thin-shadow;
+        padding: 35px 40px 40px 40px;
+        margin-bottom: 20px;
+
+        span {
+            float: right;
+        }
+
+        &--list {
+            margin: 20px 0;
+            border-bottom: 2px solid grey;
+            
+            p {
+                @include font-face('Roboto', 15px, 400, normal, capitalize);
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+        }
+        
+        &--btn {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        &--code {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px 5px;
+        }
+
+        @media all and (max-width: 950px) {
+            padding: 20px;
+        }
+    }
+}
+
+#clear-list {
+    margin: 40px 0 0;
+
+    @media all and (max-width: 950px) {
+        width: 100%;
+        order: 2;
+    }
+
+    @media all and (max-width: 500px) {
+        margin: 0 0 20px 0;
+    }
+}

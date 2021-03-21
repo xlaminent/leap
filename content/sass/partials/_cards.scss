@@ -1,0 +1,147 @@
+.grid {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+    
+    &__ul {
+        @include clean-lists;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__card {
+        width: 24%;
+        margin-bottom: 40px;
+        position: relative;
+
+        @media all and (max-width: 950px) {
+            background-color: $secondary-background;
+            @include thin-shadow;
+            text-align: center;
+        }
+
+        @media all and (max-width: 1100px) {
+            width: 32%;
+        }
+    
+        @media all and (max-width: 950px) {
+            width: 48%;
+        }
+
+        @media all and (max-width: 650px) {
+            width: 100%;
+        }
+
+        div:first-child {
+            height: 400px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        &--price, .promotion__li--price, .brand__promotion--price {
+            color: $text-color;
+            @include font-face('Roboto', 15px, 500, normal, uppercase);
+        }
+    }
+
+    &__card--mark {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+
+        p {
+            @include font-face('Raleway', 10px, 600, normal, uppercase);
+            background-color: $secondary-background;
+            padding: 2px 8px 4px 8px;
+            @include thin-shadow;
+        }
+
+        span {
+            font-size: 14px;
+            color: $leap-green!important;
+        }
+    }
+
+    &__img {
+        float: left;
+        @include cover-image;
+        @include transition(all .4s ease-in-out);
+    
+        &:hover {
+            @include transform(scale(1.2));
+        }
+    }
+}
+
+.promotion, .brand__promotion {
+    @extend .grid;
+    
+    .promotion__ul, .brand__promotion ul {
+        @extend .grid__ul;
+        justify-content: space-between;
+
+        @media all and (max-width: 950px) {
+            padding: 0 20px;
+        }
+    }
+
+    &__li {
+        @extend .grid__card;
+
+        div:first-child {
+            width: 100%;
+        }
+    
+        @media all and (max-width: 950px) {
+            width: 100%!important;
+        }
+    }
+}
+
+.promotion {
+    &__li {
+        @extend .grid__card;
+        width: 33%;
+
+        @media all and (max-width: 650px) {
+            width: 100%;
+        }
+    }
+}
+
+.brand__promotion {
+    ul {
+        @extend .grid__ul;
+    }
+
+    li {
+        @extend .grid__card;
+        width: 49%;
+        max-height: 400px;
+
+        h4 {
+            margin: 10px 0 10px 0;
+            @include font-face('Raleway', 16px, 400, normal, none);
+        }
+
+        div:first-child {
+            height: unset;
+        }
+        
+        @media all and (max-width: 650px) {
+            width: 100%;
+            background-color: $secondary-background;
+            @include thin-shadow;
+        }
+    }
+}
